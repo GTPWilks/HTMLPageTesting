@@ -1,330 +1,0 @@
-<HTML> 
-	<HEAD> 
-		<TITLE> 
-			Desktop Script Details 
-		</TITLE>
-		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
-	</HEAD> 
-	<BODY> 
-		<H1>Desktop <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
-
- Handler script for general PC/Desktop items<br>See README for documentation and usage examples<br>https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview 
-<br>
-
-
-
-
-<br>
-
-
-		<H3>Handlers in Desktop script:</H3>
-		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>MaximizeCurrentWindow</strong> <em>SecondsToDelay</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Maximize the active window. If Screen is mis-sized then please verify Snap Windows if off in Settings -> System -> Multitasking</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SecondsToDelay</b> -- - seconds to wait before performing action</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.MaximizeCurrentWindow "[SecondsToDelay]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.MaximizeCurrentWindow, @@Maximize, @@Window</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>MinimizeCurrentWindow</strong> <em>SecondsToDelay</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Minimize selected application in windows. </TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SecondsToDelay</b> -- - seconds to wait before performing action</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.MinimizeCurrentWindow</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.MinimizeCurrentWindow, @@Minimize, @@Window</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>MinimizeAllWindows</strong> <em>SecondsToDelay</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Minimize all application in windows. </TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SecondsToDelay</b> -- - seconds to wait before performing action</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.MinimizeAllWindows</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.MinimizeAllWindows, @@Minimize, @@Windows</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>LogoutWindows</strong> </TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Logouts out of windows device. Common use before disconnecting</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SecondsToDelay</b> -- - seconds to wait before performing action</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.LogoutWindows</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.LogoutWindows, @@Logout</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>WindowsLoginCheck</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Returns True/False If user is Logged into Windows by verIfying start menu icon is displayed</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Boolean value - If Windows Start menu icon is displayed</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.WindowsLoginCheck</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.WindowsLoginCheck, @@Login</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>LaunchTask</strong> <em>Task</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Will launch task/applicaiton that is passed in</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>Task</b> -- Process to launch.  Can be a list if needed </TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.LaunchTask "[Task]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.LaunchTask, @@Launch, @@Task</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>KillTask</strong> <em>Task</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Will end all running processes for passed in task/application</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>Task</b> -- process to end/kill.  Can be a list if needed</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.KillTask "[Task]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.KillTask, @@End, @@Task, @@Kill</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>EnterShortcutKeys</strong> <em>ShortcutKeyList</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Given a list of shortkeys will enter them using the keydown and keyup commands to help making sure all are pressed</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>ShortcutKeyList</b> -- List of the shortcut key combo.  Example: [Altkey, "a"]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.EnterShortcutKeys "[ShortcutKeyList]"			</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.EnterShortcutKeys, @@Shortcut, @@Desktop</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>DismissDragonMedical</strong> </TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Dismiss/Cancel the Dragon Medical pop-up</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Desktop.DismissDragonMedical</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Desktop.DismissDragonMedical, @@Dismiss, @@DragonMedical, @@Desktop.Dismiss</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-		</TABLE> 
-
-		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
-	</BODY> 
-</HTML> 

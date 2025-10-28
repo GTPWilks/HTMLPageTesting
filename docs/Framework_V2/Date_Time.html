@@ -1,338 +1,0 @@
-<HTML> 
-	<HEAD> 
-		<TITLE> 
-			Date_Time Script Details 
-		</TITLE>
-		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
-	</HEAD> 
-	<BODY> 
-		<H1>Date_Time <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
-
- Handler Script for various Date / Time methods
-<br>
-
-
-
-
-<br>
-
-
-		<H3>Handlers in Date_Time script:</H3>
-		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>CalculateAge</strong> <em>BirthDate</em> </TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Handler script for Date and Time items<br>See README for documetation and usage examples<br>https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>BirthDate</b> -- date of birth used to calculate an age (format mm/dd/yyyy)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.CalculateAge "[BirthDate]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.CalculateAge, @@Calculate, @@Age, @@CalculateAge</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>NextHour</strong> <em>MinutesPastHour</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Returns the time of the next top of the hour</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>MinutesPastHour</b> -- minutes to include past the next hour</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.NextHour [MinutesPastHour]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.NextHour, @@NextHour</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>GetSystemDateTimeTaskbar</strong> <em>SearchRect_DateTime</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Get the system date and time from the taskbar.</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SearchRect_DateTime</b> -- Area where system date appears.  Optional as there is a default</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">TimeInfo list containing Date, Time</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.GetSystemDateTimeTaskbar [SearchRect_DateTime]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.GetSystemDateTimeTaskbar, @@Date, @@Time</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>getDateOrTimeFromRegionFormat</strong> <em>Format</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Get the system date and time from Region Control Panel DiaLog Window in given format .</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>Format</b> -- Time Format needed (Short date, Long date, Short time, Long time)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">FormattedDateTime date and time in the requested format</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.GetDateOrTimefromRegionFormat "[Format]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.GetDateOrTimefromRegionFormat, @@Date, @@Time, </TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>GetDateTimeAndZoneFromCMD</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Get the system date and time from using commands</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">TimeInfo - list containing Date, time</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.GetDateTimeAndZoneFromCMD </TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.GetDateTimeAndZoneFromCMD, @@Date, @@Time</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>weekDate</strong> <em>aDate: the date</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Get the system date and time from using commands</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>aDate</b> -- a date in format that eggplant supports.  Uses todays date if empty/not passed</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">weekCalc year number, week number of the year, week day number (Sun = 1, Mon = 2, ect)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.weekDate "[aDate]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.weekDate, @@Week</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>EpicTimeZoneOffset</strong> <em>EpicTimeZone</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Get the system date and time from using commands. </TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>EpicTimeZone</b> -- time zone Epic is running in.  Log the availableTimeZoneNames to see options supported by eggplant</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">difference in time between exeuciton machine and Epic session (usually in hours)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.EpicTimeZoneOffset EpicTimeZone</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.EpicTimeZoneOffset, @@EpicTimeZoneOffset, @@TimeZone</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >To <strong>GetRoundedMilitaryTime</strong> <em>TimeInfo</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Get the SUT time, Convert to Military Time, and round up to nearest quarter hour. </TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>TimeInfo</b> -- Accepts a scheduled time to return time rounded up to the nearest quarter hour</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Rounded Military Time.</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Date_Time.GetRoundedMilitaryTime</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Date_Time.GetRoundedMilitaryTime, @@GetRoundedMilitaryTime, @@RoundedMilitary</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-		</TABLE> 
-
-		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
-	</BODY> 
-</HTML> 

@@ -1,289 +1,0 @@
-<HTML> 
-	<HEAD> 
-		<TITLE> 
-			Citrix Script Details 
-		</TITLE>
-		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
-	</HEAD> 
-	<BODY> 
-		<H1>Citrix <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
-
- Handler script for general Citrix items 
-<br>
-
-
-
-
-<br>
-
-
-		<H3>Handlers in Citrix script:</H3>
-		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>TerminateSession</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10">  Terminate Citrix session</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.TerminateSession</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.TerminateSession, @@Citrix, @@Terminate, @@Session</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>NavigateToApp</strong> <em>citrixURL, username, password, appDomainName, applicationName</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10">  Navigate to citirx url, login, search for and select app domain. <br>	For app domain an assumption is only one result is returned.  If multiple results, the first one will be selected</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>citrixURL</b> -- URL of citrix storefront<br><b>username</b> -- username credential for citrix<br><b>password</b> -- password credential for citrix<br><b>appDomainName</b> --  full application domain name to open.  <br><b>applicationName</b> -- application to open</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.NavigateToApp "citrixURL", "username", "password", "appDomainName", "applicationName"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.navigateToApp, @@Citrix</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>OpenStoreFront</strong> <em>citrixURL</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Navigate to Citirx URL using Microsoft Edge browser</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>citrixURL</b> -- -- URL of citrix storefront</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.openStoreFront ["citrixURL"]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.OpenStoreFront, @@Citrix, @@StoreFront</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>CheckStoreFrontOpen</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Checks if storefront login page is displayed</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i> Return</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">boolean - page displayed</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.CheckStoreFrontOpen</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.CheckStoreFrontOpen, @@Citrix, @@CheckStoreFront</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>LoginToApps</strong> <em>username, password</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Enter username, password and select log on/in on citrix store front.  Assumes username field is selected.  It is by default</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>username</b> -- -- username credential for citrix<br><b>password</b> -- -- password credential for citrix</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.loginToApps username, password</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.LoginToApps, @@Citrix, @@LoginToApps</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>SearchFilterAppDomain</strong> <em>appDomainName</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Search/Filter for application/domain from the app selection.</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>appDomainName</b> -- - full application domain name to filter by</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.SearchFilterAppDomain (appDomainName)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.SearchFilterAppDomain, @@Citrix, @@Filter</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>SelectAppDomain</strong> <em>appDomainName</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Select application/domain from the app selection.  Assumption is only one result is returned.  If multiple results, the first one will be selected</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>appDomainName</b> -- - full application domain name to open.  </TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.selectAppDomain (appDomainName)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.SelectAppDomain, @@Citrix, @@SelectApp</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Cleanup</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Kill citrix process if left running</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Citrix.Cleanup</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Citrix.Cleanup, @@Citrix</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-		</TABLE> 
-
-		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:50 PM</i>
-	</BODY> 
-</HTML> 

@@ -1,417 +1,0 @@
-<HTML> 
-	<HEAD> 
-		<TITLE> 
-			WebBrowser Script Details 
-		</TITLE>
-		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
-	</HEAD> 
-	<BODY> 
-		<H1>WebBrowser <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
-
------------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: WebBrowser<br>	Handler script for general internet browser items<br><br>	See README for documetation and usage examples<br>	https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
-<br>
-
-
-
-
-<br>
-
-
-		<H3>Handlers in WebBrowser script:</H3>
-		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>LaunchChromeIncognitoMax_WithURL</strong> <em>URL, KillTask:True</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Launch Chrome (Incognito mode), Enter url, and maximize</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>URL</b> -- address or url to navigate to<br><b>KillTask</b> -- Should browser app be killed/ended before launching a new one. Default is True</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.LaunchChromeIncognitoMax_WithURL "[URL]", KillTask</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.LaunchChromeIncognitoMax_WithURL, @@Chrome, @@URL, @@Incognito</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>LaunchChromeIncognito</strong> <em>KillTask:True</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Launch Chrome in incognito mode from Windows device. Assumes Chrome is installed on the Windows device.</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>KillTask</b> -- Should browser app be killed/ended before launching a new one. Default is True	</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.LaunchChromeIncognito KillTask</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.LaunchChromeIncognito, @@Chrome</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Disable3rdPartyBlockerIncognito</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>With incognito we need to disable blocking of thrid party cookies</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.Disable3rdPartyBlockerIncognito</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.Disable3rdPartyBlockerIncognito, @@Chrome, @@Incognito</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>LaunchEdgePrivateMax_WithURL</strong> <em>URL , KillTask: true</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Launch Microsoft edge private, enter URL, and maximize</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>URL</b> -- address or url to navigate to (optional, will open empty inPrivate browsing window)<br><b>KillTask</b> -- Should browser app be killed/ended before launching a new one. Default is True</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.LaunchEdgePrivateMax_WithURL "[URL]", KillTask</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.LaunchEdgePrivateMax_WithURL, @@Edge, @@URL, @@Private</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>OpenTabEnterURL</strong> <em>URL</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Assumes Browser is already open.  Will open new tab and enter URL</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>URL</b> -- address or url to navigate to</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.OpenTabEnterURL "[URL]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.OpenTabEnterURL, @@URL</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >To <strong>SelectAddressAndEnterURL</strong> <em>URL , KillTask: true</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Selects address bar in browser and navigates to a new URL</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>URL</b> -- address or url to navigate to</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.SelectAddressAndEnterURL "[URL]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.SelectAddressAndEnterURL, @@URL, @@Address, @@Web</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>SelectAddressBar</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Assumes Browser is already open.  Will select the address bar</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.SelectAddressBar</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.SelectAddressBar, @@Address, @@AddressBar</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>OpenNewTab</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Assumes Browser is already open.  Will open a new tab in browser</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.OpenNewTab</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.OpenNewTab, @@Tab, @@NewTab</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Back</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Assumes Browser is already open.  Will go back to previous URL</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.Back</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.Back, @@Browser, @@Back</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Forward</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Assumes Browser is already open.  Will go back to previous URL</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.Forward</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.Forward, @@Browser, @@Forward</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Refresh</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Assumes Browser is already open.  Refresh current page</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.Refresh</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.Refresh, @@Browser, @@Refresh</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>CopyCurrentURL</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>selects the current url and copies it to local keyboard<br>Note - Remoteclipboard() does not work with device outside of windows so unable to Return this value</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.CopyCurrentURL</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.CopyCurrentURL, @@URL, @@Copy, @@Browser</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>CloseAllEdgeTabs</strong></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Closes all opened tabs on edge browser. </TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">WebBrowser.CloseAllEdgeTabs</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@WebBrowser.CloseAllEdgeTabs, @@Edge, @@Close</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-		</TABLE> 
-
-		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
-	</BODY> 
-</HTML> 

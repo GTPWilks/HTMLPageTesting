@@ -1,303 +1,0 @@
-<HTML> 
-	<HEAD> 
-		<TITLE> 
-			Find Script Details 
-		</TITLE>
-		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
-	</HEAD> 
-	<BODY> 
-		<H1>Find <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
-
------------------------------------------------------------------------------------------------------------------------------------------------------------<br>	 Handler scripts for Finding items on the screen<br><br>	See README for documetation and usage examples<br>	https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
-<br>
-
-
-
-
-<br>
-
-
-		<H3>Handlers in Find script:</H3>
-		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Text</strong> <em>TextToFind, SecondsToWait, SecondsToPause, ScreenArea, Difference: 0, Case_Sensitive: "Yes"</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Finds given text and will pause a given time once found before continuing to next action</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>TextToFind</b> -- Text to locate<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)<br><b>SecondsToPause</b> --  hard wait time once found to pause<br><b>ScreenArea</b> -- valid ScreenPart for finding the Text<br><b>Difference</b> -- Number for text Difference<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.Text "[TextToFind]", [SecondsToWait], [SecondsToPause], [ScreenArea], [Difference]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.Text, @@Find, @@Text</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>TextInSR</strong> <em>TextToFind, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, Difference: 0</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Wraps the 'Find' statement to find Text inside a dynamic SearchRectangle defined from another text string </TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>TextToFind</b> -- Text to Find<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the TextForSR (required)<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the Text after it is found<br><b>Difference</b> -- number of allowed characters different in TextToFind<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.TextInSR "[TextToFind]", "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause], [Difference]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.TextInSR, @@Text, @@SearchRectangle, @@Search, @@Rectangle, @@Find</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Image</strong> <em>ImageToFind, SecondsToWait, SecondsToPause, ScreenArea</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Finds given image and will pause a given time once found before continuing to next action</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>ImageToFind</b> -- Image to locate<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)<br><b>SecondsToPause</b> --  hard wait time once found to pause<br><b>ScreenArea</b> -- valid ScreenPart for finding the Image</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.Image "[ImageToFind]", [SecondsToWait], [SecondsToPause], [ScreenArea]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.Image, @@Find, @@Image</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>ImageInSR</strong> <em>ImageToFind, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, Difference: 0</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Wraps the 'Find.Image' handler to find an Image inside a dynamic SearchRectangle defined from another text string then pauses</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>ImageToFind</b> -- Image to find<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the TextForSR (required)<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause after image is found</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.ImageInSR "[ImageToFind]", "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.ImageInSR, @@Image, @@SearchRectangle, @@Search, @@Rectangle, @@Wait, @@WaitFor</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>TextWithScroll</strong> <em>TextToFind, SecondsToWait, SecondsToPause, ScreenArea, Difference:0, TextTooFar, WheelClicks:1, ScreenCoords</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Finds text with scrolling search</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>TextToFind</b> -- - Text to locate<br><b>SecondsToWait</b> -- - the number of seconds for the 'WaitFor' (default is 3)<br><b>SecondsToPause</b> --  - hard wait time once found to pause<br><b>ScreenArea</b> -- - valid ScreenPart for finding the Text<br><b>Difference</b> -- - Number for text Difference<br><b>WheelClicks</b> -- - how many mouse wheel clicks to perform in down direction<br><b>ScreenCoords</b> -- - where to location the mouse to perform the scroll action</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.TextWithScroll "[TextToFind]", [SecondsToWait], [SecondsToPause], "[ScreenArea]", [Difference], "[TextTooFar]", [WheelClicks], [ScreenCoords]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.TextWithScroll, @@Scroll, @@Find</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>ScrollDownSearch</strong> <em>SearchType, SearchObject, ScreenArea, WheelClicks: 1, ScreenCoords, SecondsToWait, ScrollLimit, Difference: 0</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Finds image/text with scrolling down search</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SearchType</b> --  - Type of Search - "Image" or "Text"<br><b>SearchObject</b> --  - the Text or imageName of the object to look for<br><b>ScreenArea</b> -- - valid ScreenPart for finding the Text<br><b>WheelClicks</b> -- - Number of consecutive times to scroll down on the screen<br><b>ScreenCoords</b> -- - Area of the Screen to MoveTo for scrolling<br><b>SecondsToWait</b> -- - time to for item before scrolling <br><b>ScrollLimit</b> -- (optional) - If no value will attempt 20 scrolls before throwing exception else uses value in scrollLimit.<br><b>Difference</b> -- - number of allowed characters different in TextToFind</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.ScrollDownSearch "[SearchType]", "[SearchObject]", "[ScreenArea]", [WheelClicks], [ScreenCoords], [SecondsToWait], [ScrollLimit], [Difference]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.ScrollDownSearch, @@Scroll, @@Find</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>ScrollUpSearch</strong> <em>SearchType, SearchObject, ScreenArea, WheelClicks: 1, ScreenCoords, SecondsToWait, ScrollLimit, Difference: 0</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Finds image/text with scrolling up search</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SearchType</b> -- Type of Search - "Image" or "Text"<br><b>SearchObject</b> -- the Text or imageName of the object to look for<br><b>ScreenArea</b> -- valid ScreenPart for finding the Text<br><b>WheelClicks</b> -- Number of consecutive times to scroll up on the screen<br><b>ScreenCoords</b> -- Area of the Screen to MoveTo for scrolling<br><b>SecondsToWait</b> -- time to for item before scrolling <br><b>ScrollLimit</b> -- (optional) If no value will attempt 20 scrolls before throwing exception else uses value in scrollLimit<br><b>Difference</b> -- number of allowed characters different in TextToFind</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.ScrollUpSearch "[SearchType]", "[SearchObject]", "[ScreenArea]", [WheelClicks], [ScreenCoords], [SecondsToWait], [ScrollLimit], [Difference]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.ScrollUpSearch, @@Scroll, @@Find</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>ScrollSearchDirection</strong> <em>SearchType, SearchObject, ScreenArea, WheelClicks: 1, ScreenCoords, SecondsToWait, Direction: "ScrollWheelDown", ScrollLimit, Difference: 0</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Finds image/text with scrolling search in direction that is Exit</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SearchType</b> --  Type of Search "Image" or "Text"<br><b>SearchObject</b> --  the Text or imageName of the object to look for<br><b>ScreenArea</b> -- valid ScreenPart for finding the Text<br><b>WheelClicks</b> -- Number of consecutive times to scroll up/down on the screen<br><b>ScreenCoords</b> -- Area of the Screen to MoveTo for scrolling<br><b>SecondsToWait</b> -- time to for item before scrolling <br><b>Direction</b> -- up/down direction to scroll<br><b>ScrollLimit</b> -- (optional) If no value will attempt 20 scrolls before throwing exception else uses value in scrollLimit<br><b>Difference</b> -- number of allowed characters different in SearchObject. Only used if SearchType is "Text"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Find.ScrollSearchDirection "[SearchType]", "[SearchObject]", "[ScreenArea]", [WheelClicks], [ScreenCoords], [SecondsToWait],"[Direction]", [ScrollLimit], [Difference]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@Find.ScrollSearchDirection, @@Scroll, @@Find</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-		</TABLE> 
-
-		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
-	</BODY> 
-</HTML> 

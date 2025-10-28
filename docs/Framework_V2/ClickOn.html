@@ -1,235 +1,0 @@
-<HTML> 
-	<HEAD> 
-		<TITLE> 
-			ClickOn Script Details 
-		</TITLE>
-		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
-	</HEAD> 
-	<BODY> 
-		<H1>ClickOn <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
-
- Handler Script for Clicking on items using various methods 
-<br>
-
-
-
-
-<br>
-
-
-		<H3>Handlers in ClickOn script:</H3>
-		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Image</strong> <em>ImageToClick, SecondsToWait, SecondsToPause, TypeOfClick: "Single", ScreenArea, HotSpotCoords, ResetMouse: false</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Handler script that wraps the 'Click' statement for improved flexibility and reliability<br>See README for documetation and usage examples<br>https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>ImageToClick</b> -- name of the image to click on<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>TypeOfClick</b> -- valid options are 'Single', 'Right', 'Double' and 'Triple'. Default is Single If no valid value is provided.<br><b>ScreenArea</b> -- valid ScreenPart for finding the image<br><b>HotSpotCoords</b> -- location to click relative to top left of text that is found<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ClickOn.Image [ImageToClick], [SecondsToWait], [SecondsToPause], "[TypeOfClick]", "[ScreenArea]", [HotSpotCoords], "ResetMouse"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ClickOn.Image, @@Image, @@ClickOn, @Click</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Text</strong> <em>TextToClick, SecondsToWait, SecondsToPause, TypeOfClick: "Single", ScreenArea, HotSpotCoords, Difference: 0, ResetMouse: false, Case_Sensitive: "Yes"</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Clicks on text, using Click statement, improved flexibility and reliability</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>TextToClick</b> -- text to click on<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>TypeOfClick</b> -- valid options are 'Single', 'Right', 'Double' and 'Triple'. Default is Single If no valid value is provided.<br><b>ScreenArea</b> -- valid ScreenPart for finding the image<br><b>HotSpotCoords</b> -- location to click relative to top left of text that is found<br><b>Difference</b> -- valid options are 1-3. This property causes text searches to find text that dIffers from your search by a given number of characters.<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ClickOn.Text "[TextToClick]", [SecondsToWait], [SecondsToPause], "[TypeOfClick]", "[ScreenArea]", [HotSpotCoords], [Difference], "ResetMouse", "Case_Sensitive"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ClickOn.Text, @@Text, , @@ClickOn, @Click</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>TextInSR</strong> <em>TextToClick, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, TypeOfClick: "Single", Difference: 0, HotSpotCoords, ResetMouse: false, Case_Sensitive: "Yes"</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Wraps the 'Click' statement to click on text inside a dynamic SearchRectangle defined from another text string</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>TextToClick</b> -- text to click on<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the image<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>TypeOfClick</b> -- valid options are 'Single', 'Right', 'Double' and 'Triple'. Default is Single If no valid value is provided.<br><b>Difference</b> -- valid options are 1-3. This property causes text searches to find text that dIffers from your search by a given number of characters.<br><b>HotSpotCoords</b> -- location to click relative to top left of text that is found<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ClickOn.TextInSR "[TextToClick]", "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause], "[TypeOfClick]", [Difference], [HotSpotCoords], "ResetMouse", "Case_Sensitive"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ClickOn.TextInSR, @@Text, @@SearchRectangle, @@Search, @@Rectangle, @Click</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>ImageInSR</strong> <em>ImageToClick, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, TypeOfClick: "Single", HotSpotCoords, ResetMouse: false, Difference:0</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Wraps the 'Click' statement to click on an image inside a dynamic SearchRectangle defined by a text string</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>ImageToClick</b> -- image to click on (required)<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the image<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>TypeOfClick</b> -- valid options are 'Single', 'Right', 'Double' and 'Triple'. Default is Single If no valid value is provided.<br><b>HotSpotCoords</b> -- location to click relative to top left of text that is found<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers<br><b>Difference</b> -- valid options are 1-3. This property causes text searches to find text that dIffers from your search by a given number of characters.</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ClickOn.ImageInSR [ImageToClick], "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause], "[TypeOfClick]", [HotSpotCoords], "ResetMouse", "Difference"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ClickOn.ImageInSR, @@Image, @@SearchRectangle, @@Search, @@Rectangle, @Click, @@SearchRectangle</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>RelativeTo</strong> <em>SearchType, SearchObject, ScreenArea, SecondsToWait, SecondsToPause, Direction, Distance, Optionalfrom, ResetMouse: false</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Click a distance from the edge of a rectangle which bounds an element, either image or text.  <br>the rectangle edge selected is based on the direction Exit.  Up is Top, Left is Left, Down is Bottom and Right is Right.<br>By default the center of each edge is used as the start or from point.  the from point can<br>optionally be Exit, either left or right for Horizontal edges; top or bottom for vertical edges.<br>As we are specIfying a direction, distance should always be a positive number so in all instances<br>the absolute value of distance will be used. Will LogError when attempting to click on, or within, SearchObject's rectangle.  <br>Due to the absolute value issue above this will only be possible If a distance of zero is used.</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>SearchType</b> -- Image or Text search, must specIfy which<br><b>SearchObject</b> -- the Image, or Text,  you want to click relative to<br><b>ScreenArea</b> -- valid ScreenPart for finding the TextForSR (required)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)<br><b>SecondsToPause</b> -- hard wait before attempting click action<br><b>Direction</b> -- "Up", "Down", "Left", "Right"  (Not case sensitive)<br><b>Distance</b> -- Number of pixels in "Direction"<br><b>Optionalfrom</b> -- Optional field.  <br>	If Direction is "Up" or "Down" then only "Left" or "Right" can be used.<br>	If Direction is "Left" or "Right" then only "Top" or "Bottom" can be used.<br>	If this field is left empty then "Center" is used</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ClickOn.RelativeTo "[SearchType]", "[SearchObject]", "[ScreenArea]", [SecondsToWait], [SecondsToPause], "[Direction]", [Distance], "[Optionalfrom]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ClickOn.RelativeTo, @@Image, @@Text, @@Relative, @@Near, @Click</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>Intersection</strong> <em>RowSearchType, RowSearchObject, RowScreenArea, ColumnSearchType, ColumnSearchObject, ColumnScreenArea, TypeOfClick: "Single", ResetMouse: false, HotSpotCoords: [0,0], SecondsToWait</em> </TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br> Clicks on the intersection of two objects (both can be either text or image)</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>RowSearchType</b> -- - text or image type in row<br><b>RowSearchObject</b> -- - actual text or image value in row<br><b>RowScreenArea</b> -- - area to look for row object in<br><b>ColumnSearchType</b> -- - text or image type in column<br><b>ColumnSearchObject</b> -- - actual text or image value in column<br><b>ColumnScreenArea</b> -- - area to look for column object in<br><b>TypeOfClick</b> -- - type of mouse click (default is left)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ClickOn.Intersection "[RowSearchType]", "[RowSearchObject]", "[RowScreenArea]", "[ColumnSearchType]", "[ColumnSearchObject]", "[ColumnScreenArea]", "[TypeOfClick]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ClickOn.Intersection,  @@Intersection, @@Text, @@Image, @Click</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-		</TABLE> 
-
-		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:50 PM</i>
-	</BODY> 
-</HTML> 

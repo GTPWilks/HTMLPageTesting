@@ -1,211 +1,0 @@
-<HTML> 
-	<HEAD> 
-		<TITLE> 
-			ScreenPart Script Details 
-		</TITLE>
-		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
-	</HEAD> 
-	<BODY> 
-		<H1>ScreenPart <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
-
------------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: ScreenPart
-<br>
-
-
-
-
-<TABLE border=0 style="width:100%;">
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Purpose</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">Given a portion of the screen will calculate and return an area of screen based on resolution</TD> 
-			</TR> 
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ScreenPart, @@Screen, @@Portion, @@Area, @@SearchArea, @@ScreenArea<br>	<br>	See README for documetation and usage examples<br>	https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------</TD> 
-			</TR> 
-
-</TABLE>
-
-<br>
-
-
-		<H3>Handlers in ScreenPart script:</H3>
-		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >[ScreenPart.script  (initial handler), equivalent to:]  to handle <strong>ScreenPart</strong> <em>Portion</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Given a valid portion of the screen, will return a search area based on the size of the SUT.</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>Portion</b> -- - area of screen to retrieve calculate area for</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ScreenPart "[Portion]"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ScreenPart, @@ScreenPortions</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>CalculateRatio</strong> <em>rectangle</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Given a searchArea will calculate the portion/ratio that can be used in ClientData or else where as a screen portion<br>Not to be used in actual code but something to run locally for assistance</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Example</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ScreenPart.CalculateRatio (532,362,997,778)<br>	Will log out [[0.277, 0.335], [0.519, 0.72]]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>rectangle</b> -- Coordinates of rectangle (x1, y1, x2, y2...(TopLeft  to BottomRight)</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ScreenPart.CalculateRatio [rectangle]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ScreenPart.CalculateRatio, @@CalculateRatio</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>getMiddleOfArea</strong> <em>area</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Given a area will calulate the center of it. Useful if need to move the mouse</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>area</b> -- Predefined screen area defined in ScreenArea scipt.</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">x,y coords</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ScreenPart.getMiddleOfArea "area"</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ScreenPart.getMiddleOfArea, @@getMiddle</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-
-			<TR CELLPADDING="2"> 
-			<TD COLSPAN="10" >to <strong>GetSR</strong> <em>initialtext, initialarea: "Full", finalArea</em></TD>
-			</TR><TR> 
-			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Given and initial text value and a final areach area will calculate the SR params needed</TD> 
-			</TR> 
-
-
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Example</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ScreenPart.GetSR "Featuring", "TopLeft", [18,377,462,597] <br>	Will log out: Topleft starting point of text is: [156,299] and <br>	[-138,78,298,306]  -- this is the value you can put into SR code</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9"><b>initialtext</b> -- Orignial text to use as a reference/starting point for final area<br><b>initialarea</b> -- Search area to use to find initialtext<br><b>finalArea</b> -- is the final rectangle you want to end up with for SR that is calculated from initial valies</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">[PixelsLeft,PixexlsUp,PixelsDown,PixelsAcross] for SR params</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">ScreenPart.GetSR ["initialtext"], ["initialarea"],["finalArea"]</TD> 
-			</TR> 
-
-
-			<TR CELLPADDING="2"> 
-			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
-
-			<TD CLASS="sp" COLSPAN="9">@@ScreenPart.GetSR, @@GetSR</TD> 
-			</TR> 
-
-			<TR CELLPADDING="0"> 
-			<TD COLSPAN="10" ><HR size = 1></TD>
-			</TR>
- 
-		</TABLE> 
-
-		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
-	</BODY> 
-</HTML> 
