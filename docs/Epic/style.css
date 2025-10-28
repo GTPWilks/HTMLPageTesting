@@ -1,0 +1,29 @@
+BODY    { 
+background: peru; 
+font: 11pt "Arial"; 
+color: black; 
+margin-left: 10%; 
+margin-right: 15%; 
+margin-top: 2%; 
+} 
+BODY.sp  { 
+background: brown; 
+font: 11pt "Comic Sans MS"; 
+color: crimson; 
+margin-left: 10%; 
+margin-right: 15%; 
+margin-top: 2%; 
+font-weight: bold 
+} 
+TD       {font: 11pt "Arial"; color: black; text-align: left; font-weight: bold} 
+TD.sp    {font: 11pt "Arial"; color: gray; text-align: justify} 
+TH       {font: 14pt "Arial"; color: navy; font-weight: bold} 
+H1       {font: 20pt "Arial"; color: maroon; font-weight: bold} 
+H2       {font: 16pt "Arial"; color: gray; font-weight: bold} 
+A        {font: 11pt "Arial"; color: navy; font-style: italic} 
+A.sp     {font: 11pt "Arial"; color: white; font-style: italic; font-weight:bold} 
+FONT.sp  {font: 10pt "Arial"; color: firebrick} 
+P    {text-align: justify} 
+P.pic    {text-align: center} 
+P.indent {margin-left: 2em} 
+P.outdent {margin-left: -2em} 

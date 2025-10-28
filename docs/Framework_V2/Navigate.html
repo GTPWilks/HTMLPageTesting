@@ -1,0 +1,181 @@
+<HTML> 
+	<HEAD> 
+		<TITLE> 
+			Navigate Script Details 
+		</TITLE>
+		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+	</HEAD> 
+	<BODY> 
+		<H1>Navigate <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: Navigate<br>	Purpose: Handler scripts for general navigation on screen<br><br>	See README for documetation and usage examples<br>	https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+
+
+<br>
+
+
+		<H3>Handlers in Navigate script:</H3>
+		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ScrollMouseDown</strong> <em> WheelClicks, ScreenCoords, ScrollAmount:1</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Scroll down using mouse and given Params</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>WheelClicks</b> -- - how many mouse wheel clicks to perform in down direction<br><b>ScreenCoords</b> -- - where to location the mouse to perform the scroll action<br><b>ScrollAmount</b> -- -- amount to scroll down with each click (default is 1)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Navigate.ScrollMouseDown WheelClicks, ScreenCoords, ScrollAmount</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Navigate.ScrollMouseDown, @@Scroll, @@ScrollDown, @@Navigate</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ScrollMouseUp</strong> <em>WheelClicks, ScreenCoords, ScrollAmount:1</em> </TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Scroll up using mouse and given Params</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>WheelClicks</b> -- - how many mouse wheel clicks to perform in up direction<br><b>ScreenCoords</b> -- - where to location the mouse to perform the scroll action<br><b>ScrollAmount</b> -- -- amount to scroll down with each click (default is 1)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Navigate.ScrollMouseUp WheelClicks, ScreenCoords </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Navigate.ScrollMouseUp, @@Scroll, @@ScrollUp, @@Navigate</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>scrollDown_atBottom</strong> <em>scrollArea</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Will read text in a given area, scroll, then read text again to see if scrolling changed what is displayed.  If no change then assumption is made at bottom</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>scrollArea</b> -- Predefined screen area defined in ScreenArea scipt.  This will be the area to check if scrolling changed anything (via OCR)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">boolean true/false.  True is bottom of scroll area is reached</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Navigate.scrollDown_atBottom [scrollArea]	 </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Navigate.scrollDown_atBottom, @@Scroll, @@Bottom</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>validateScreenSettled</strong> <em>areaToRead, timeToWait</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Will read text in given area of screen and store as a variable.  Then will read the screen again and validate the two values are equal<br>If equal then no new text is in the area and assuming screen has settled, if new values then will repeat until equal or failure/timeout happens</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>areaToRead</b> -- Predefined screen area defined in ScreenArea scipt<br><b>timeToWait</b> -- approx time of long to check screen has settled before just exiting -- default is 15</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Returns</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">boolean - true/false.  Screen has settled</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Navigate.validateScreenSettled [areaToRead], [timeToWait]</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Navigate.validateScreenSettled, @@Validate, @@Settled</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+		</TABLE> 
+
+		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
+	</BODY> 
+</HTML> 
