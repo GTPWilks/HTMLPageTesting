@@ -1,0 +1,253 @@
+<HTML> 
+	<HEAD> 
+		<TITLE> 
+			HospitalBilling/Claim Script Details 
+		</TITLE>
+		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+	</HEAD> 
+	<BODY> 
+		<H1>HospitalBilling/Claim <font size=3> -- in suite <a href="../index.html">Epic</a></font></H1> 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: Claim<br>	Handler script(s) that handles a claim within Epic (Hyperspace/Hyperdrive)<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+
+
+<br>
+
+
+		<H3>Handlers in HospitalBilling/Claim script:</H3>
+		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CreateClaim</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Creates a claim for test patient</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".CreateClaim</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"HospitalBilling\Claim".CreateClaim, @@Claim, @@Create</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ViewClaim</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>View a claim for test patient</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".ViewClaim</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"HospitalBilling\Claim".ViewClaim , @@Claim, @@View\</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CollectRunNumber</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Collects the run number in the claims selection for professional billing</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".CollectRunNumber</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"HospitalBilling\Claim".CollectRunNumber, @@Claim, @@Collect</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CreateHBClaimRun</strong> <em>runType, runTypeValue</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Creates HB Run<br>Prerequisites: The HB Claim run window is open</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>runType</b> -- what you want to use to run the claim (Patient, Guarantor Account, Hospital Account, etc.)<br><b>runTypeValue</b> -- the numerical value (MRN, Account ID, etc)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".CreateHBClaimRun ["runType"] ["runTypeValue"]</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"HospitalBilling\Claim".CreateHBClaimRun , @@Claim, @@Create</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CreateClaim_HyperspaceVariety1</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Creates a claim for test patient</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".CreateClaim_HyperspaceVariety1</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"HospitalBilling\Claim".CreateClaim_HyperspaceVariety1 , @@Claim, @@Create</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ViewClaim_HyperspaceVariety1</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>View a claim for test patient</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".ViewClaim_HyperspaceVariety1</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CollectRunNumber_HyperspaceVariety1</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Collects the run number in the claims selection for professional billing</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".CollectRunNumber_HyperspaceVariety1</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CreateHBClaimRun_HyperspaceVariety1</strong> <em>runType, runTypeValue</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Creates HB Run</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".CreateHBClaimRun_HyperspaceVariety1 ["runType"] ["runTypeValue"]</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CreateHBClaimRun_HyperdriveVariety1</strong> <em>runType, runTypeValue</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Creates HB Run</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"HospitalBilling\Claim".CreateHBClaimRun_HyperspaceVariety1 ["runType"] ["runTypeValue"]</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+		</TABLE> 
+
+		<br><br><i>Generated by EggDoc on Wednesday, August 28, 2024 12:02 PM</i>
+	</BODY> 
+</HTML> 

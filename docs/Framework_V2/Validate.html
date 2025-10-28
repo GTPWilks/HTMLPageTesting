@@ -1,0 +1,233 @@
+<HTML> 
+	<HEAD> 
+		<TITLE> 
+			Validate Script Details 
+		</TITLE>
+		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+	</HEAD> 
+	<BODY> 
+		<H1>Validate <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: Validate<br>	Handler scripts for validating items appear on screen<br><br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+
+
+<br>
+
+
+		<H3>Handlers in Validate script:</H3>
+		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>Text</strong> <em>TextToFind, SecondsToWait, SecondsToPause, ScreenArea, Difference: 0, Message, FailType, Case_Sensitive: "Yes", ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Validates text appears, logs warning if it does not</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>TextToFind</b> -- Text to locate<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)<br><b>SecondsToPause</b> --  hard wait time once found to pause<br><b>ScreenArea</b> -- valid ScreenPart for finding the Text<br><b>Difference</b> -- Number for text Difference<br><b>Message</b> -- Message to display in evidence log if handler fails to validate text<br><b>FailType</b> -- Expected behavior if validation fails. Default is a warning if not set in clientdata or passed in (Warning, Error, and Exception are valid values)<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Validate.Text "[TextToFind]", [SecondsToWait], [SecondsToPause], [ScreenArea], [Difference],"[Message]","[FailType]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Validate.Text, @@Validate, @@Text</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>TextInSR</strong> <em>TextToFind, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, Difference: 0, Message, FailType, ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Validates that text appears in a search rectangle keyed off another piece of text and logs warning if it does not</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>TextToFind</b> -- Text to Find<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the TextForSR (required)<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the Text after it is found<br><b>Difference</b> -- number of allowed characters different in TextToFind<br><b>Message</b> -- Message to display in evidence log if handler fails to validate Image<br><b>FailType</b> -- Expected behavior if validation fails. Default is a warning if not set in clientdata or passed in (Warning, Error, and Exception are valid values)<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Validate.TextInSR "[TextToFind]", "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause], [Difference], "[Message]","[FailType]"	</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Validate.TextInSR, @@Validate, @@SearchRectangle, @@Search, @@Rectangle, @@Find</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" ></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Validates given image appears in screen part and logs warning if it does not</TD> 
+			</TR> 
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>ImageToFind</b> -- Image to locate<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)<br><b>SecondsToPause</b> --  hard wait time once found to pause<br><b>ScreenArea</b> -- valid ScreenPart for finding the Image<br><b>Message</b> -- Message to display in evidence log if handler fails to validate Image<br><b>FailType</b> -- Expected behavior if validation fails. Default is a warning if not set in clientdata or passed in (Warning, Error, and Exception are valid values)<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Validate.Image "[ImageToFind]", [SecondsToWait], [SecondsToPause], [ScreenArea],"[Message]","[FailType]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Validate.Image, @@Validate, @@Image</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ImageInSR</strong> <em>ImageToFind, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, Difference: 0, Message, FailType, ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Validates Image based on dynamic search rectangle and logs warning if it does not</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>ImageToFind</b> -- Image to find<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the TextForSR (required)<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause after image is found<br><b>Difference</b> -- number of allowed characters different in TextForSR<br><b>Message</b> -- Message to display in evidence log if handler fails to validate Image<br><b>FailType</b> -- Expected behavior if validation fails. Default is a warning if not set in clientdata or passed in (Warning, Error, and Exception are valid values)<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Validate.ImageInSR "[ImageToFind]", "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause], [Difference], "[Message]","[FailType]", [ResetMouse]</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Validate.ImageInSR, @@Image, @@SearchRectangle, @@Search, @@Rectangle, @@Wait, @@WaitFor</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>TextNoFound</strong> <em>TextToFind, SecondsToWait, SecondsToPause, ScreenArea, Difference: 0, Message, FailType, ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Validates text does not appears, if want to check patient (or other) is removed from screen</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>TextToFind</b> -- Text to locate (or not locate)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)<br><b>SecondsToPause</b> --  hard wait time once found to pause<br><b>ScreenArea</b> -- valid ScreenPart for finding the Text<br><b>Difference</b> -- Number for text Difference<br><b>Message</b> -- Message to display in evidence log if handler fails to validate text<br><b>FailType</b> -- Expected behavior if validation fails. Default is a error if not set in clientdata or passed in (Warning, Error, and Exception are valid values)<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Validate.TextNoFound "[TextToFind]", [SecondsToWait], [SecondsToPause], [ScreenArea], [Difference],"[Message]","[FailType]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Validate.Text, @@Validate, @@Text</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" ></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Validates given image no longer appears on the screen</TD> 
+			</TR> 
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>ImageToFind</b> -- Image to locate<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor' (default is 10)<br><b>SecondsToPause</b> --  hard wait time once found to pause<br><b>ScreenArea</b> -- valid ScreenPart for finding the Image<br><b>Message</b> -- Message to display in evidence log if handler fails to validate Image<br><b>FailType</b> -- Expected behavior if validation fails. Default is a warning if not set in clientdata or passed in (Warning, Error, and Exception are valid values)<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Validate.ImageNotFound "[ImageToFind]", [SecondsToWait], [SecondsToPause], [ScreenArea],"[Message]","[FailType]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Validate.Image, @@Validate, @@Image</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+		</TABLE> 
+
+		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
+	</BODY> 
+</HTML> 

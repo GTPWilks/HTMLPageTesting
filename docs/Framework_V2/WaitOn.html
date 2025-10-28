@@ -1,0 +1,167 @@
+<HTML> 
+	<HEAD> 
+		<TITLE> 
+			WaitOn Script Details 
+		</TITLE>
+		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+	</HEAD> 
+	<BODY> 
+		<H1>WaitOn <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: WaitOn<br>	Handler script that wraps the 'Wait' statement for improved flexibility and reliability<br><br>	See README for documetation and usage examples<br>	https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+
+
+<br>
+
+
+		<H3>Handlers in WaitOn script:</H3>
+		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>Image</strong> <em>ImageToWaitFor, SecondsToWait, SecondsToPause, ScreenArea, PrePause: "No", ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Wraps the 'WaitFor' statement to wait for image then pause</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>ImageToWaitFor</b> -- image to wait for<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>ScreenArea</b> -- valid ScreenPart for finding the Text<br><b>PrePause</b> -- If a pause is needed before trying to find the Image/Text obecjt.  Used if items is being found before screen is fully loaded (Defaults to No).  Valid answer is true or yes<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">WaitOn.Image "[ImageToWaitFor]", [SecondsToWait], [SecondsToPause], "[ScreenArea]"	</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@WaitOn.Image, @@Wait, @@Image, @@WaitFor</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>Text</strong> <em>TextToWaitFor, SecondsToWait, SecondsToPause, ScreenArea, Difference:0, PrePause: "No", Case_Sensitive: "Yes", ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Wraps the 'WaitFor' statement to wait for text then pause</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>TextToWaitFor</b> -- text to wait for<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>ScreenArea</b> -- valid ScreenPart for finding the Text<br><b>Difference</b> -- valid options are 1-3. This property causes text searches to find text that dIffers from your search by a given number of characters.<br><b>PrePause</b> -- If a pause is needed before trying to find the Image/Text obecjt.  Used if items is being found before screen is fully loaded (Defaults to No).  Valid answer is true or yes<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">WaitOn.Text "[TextToWaitFor]", [SecondsToWait], [SecondsToPause], "[ScreenArea]", [Difference]</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@WaitOn.Text, @@Wait, @@Text, @@WaitFor</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>TextInSR</strong> <em>TextToWaitFor, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, Difference: 0, PrePause: "No", Case_Sensitive: "Yes", ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Wraps the 'WaitFor' statement to wait for text inside a dynamic SearchRectangle defined from another text string then pauses</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>TextToWaitFor</b> -- text to wait for<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the TextForSR (required)<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>Difference</b> -- number of allowed characters dIfferent in TextToClick<br><b>PrePause</b> -- If a pause is needed before trying to find the Image/Text obecjt.  Used if items is being found before screen is fully loaded (Defaults to No).  Valid answer is true or yes<br><b>Case_Sensitive</b> -- By default is Yes but can override to No if you want to ignore case sensativity<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">WaitOn.TextInSR "[TextToWaitFor]", "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause], [Difference]	</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@WaitOn.TextInSR, @@Text, @@SearchRectangle, @@Search, @@Rectangle, @@Wait, @@WaitFor</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ImageInSR</strong> <em>ImageToWaitFor, TextForSR, ScreenArea, PixelsLeft, PixelsUp, PixelsDown, PixelsRight, SecondsToWait, SecondsToPause, Difference: 0, PrePause: "No", ResetMouse: false</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Wraps the 'WaitFor' statement to wait for image inside a dynamic SearchRectangle defined from another text string then pauses</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>ImageToWaitFor</b> -- Image to wait for<br><b>TextForSR</b> -- text to find for Setting up the search rectangle (required)<br><b>ScreenArea</b> -- valid ScreenPart for finding the TextForSR (required)<br><b>PixelsLeft</b> -- number of pixels horizontally from center of TextForSR to draw the left side of SearchRectangle (default is -100)<br><b>PixelsUp</b> -- number of pixels vertically from center of TextForSR to draw the top of SearchRectangle (default is -10)<br><b>PixelsDown</b> -- number of pixels vertically from center of TextForSR to draw the bottom of SearchRectangle (default is 50)<br><b>PixelsRight</b> -- number of pixels horizontally from center of TextForSR to draw the right side of SearchRectangle (default is 300)<br><b>SecondsToWait</b> -- the number of seconds for the 'WaitFor'<br><b>SecondsToPause</b> -- the number of seconds to pause before clicking on the image after it is found<br><b>Difference</b> -- number of allowed characters dIfferent in TextForSR<br><b>PrePause</b> -- If a pause is needed before trying to find the Image/Text obecjt.  Used if items is being found before screen is fully loaded (Defaults to No).  Valid answer is true or yes<br><b>ResetMouse</b> -- if true will move mouse before finding text to the top center of screen to prevent popovers</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">WaitOn.ImageInSR "[ImageToWaitFor]", "[TextForSR]", "[ScreenArea]", [PixelsLeft], [PixelsUp], [PixelsDown], [PixelsRight], [SecondsToWait], [SecondsToPause], [Difference] </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@WaitOn.ImageInSR, @@Image, @@SearchRectangle, @@Search, @@Rectangle, @@Wait, @@WaitFor</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+		</TABLE> 
+
+		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
+	</BODY> 
+</HTML> 

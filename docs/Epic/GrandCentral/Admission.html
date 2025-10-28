@@ -1,0 +1,179 @@
+<HTML> 
+	<HEAD> 
+		<TITLE> 
+			GrandCentral/Admission Script Details 
+		</TITLE>
+		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+	</HEAD> 
+	<BODY> 
+		<H1>GrandCentral/Admission <font size=3> -- in suite <a href="../index.html">Epic</a></font></H1> 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: Admission<br>	Handler script(s) working with patient admission within Epic (Hyperspace/Hyperdrive)<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+
+
+<br>
+
+
+		<H3>Handlers in GrandCentral/Admission script:</H3>
+		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>NewAdmission</strong> <em>Unit, PatientClass, AdmittingProvider</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Add New patient admission</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>Unit</b> -- - Nursing Unit <br><b>PatientClass-</b> -- Class location for the patient<br><b>AdmittingProvider</b> -- - providers name</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"GrandCentral\Admission".NewAdmission </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"GrandCentral/Admission".NewAdmission, @@Registration, @@Admission</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>PatientEncounterCreation</strong> </TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Add a patient encounter creation for new patient admission</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"GrandCentral\Admission".PatientEncounterCreation </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"GrandCentral/Admission".PatientEncounterCreation , @@Registration, @@Admission, , @@PatientEncounterCreation </TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>Add_AdmissionDetails</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Add details for preadmission</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"GrandCentral\Admission".Add_AdmissionDetails </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@"GrandCentral/Admission".Add_AdmissionDetails, @@AdmissionDetails</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>NewAdmission_HyperspaceVariety1</strong> <em>Unit, PatientClass, AdmittingProvider</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Add New patient admission</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"GrandCentral\Admission".NewAdmission_HyperspaceVariety1</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>PatientEncounterCreation_HyperdriveVariety1</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Add a patient encounter creation for new patient admission</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"GrandCentral\Admission".PatientEncounterCreation_HyperspaceVariety1</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>Add_AdmissionDetails_HyperspaceVariety1</strong> </TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Add details for admission</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">"GrandCentral\Admission".Add_AdmissionDetails_HyperspaceVariety1</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+		</TABLE> 
+
+		<br><br><i>Generated by EggDoc on Wednesday, August 28, 2024 12:02 PM</i>
+	</BODY> 
+</HTML> 

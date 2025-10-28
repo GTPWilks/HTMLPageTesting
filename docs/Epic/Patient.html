@@ -1,0 +1,247 @@
+<HTML> 
+	<HEAD> 
+		<TITLE> 
+			Patient Script Details 
+		</TITLE>
+		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+	</HEAD> 
+	<BODY> 
+		<H1>Patient <font size=3> -- in suite <a href="index.html">Epic</a></font></H1> 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: Patient<br>	Handler script(s) working with patient utilities within Hyperspace such as lookup or create<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+
+
+<br>
+
+
+		<H3>Handlers in Patient script:</H3>
+		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>Lookup</strong> <em>SkipWrite:No</em>	</TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Handles Patient Lookup dialog.  If universal Patient.MRN does not have a value, then this routine will create a new <br>patient using the Patient.FullName, Patient.Gender, Patient.DOB, and Patient.SSN.<br>After the patient is created, the patient MRN is read from the from the screen and Patient.MRN is set to that value. <br>If the test data source file is open read/write, the MRN is updated in the source file<br>Prerequisites: Patient Lookup diaLog is displayed, universal Patient object is initialized</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>SkipWrite</b> -- Give value of Yes so data is not written back to JSON (useful for excel RPA files)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.Lookup</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Patient.Lookup, @@Patient, @@Lookup</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>Create</strong> <em>SkipWrite:No</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>this routine will create a new patient using the Patient.FullName, Patient.Gender, Patient.DOB, and Patient.SSN.<br>After the patient is created, the patient MRN is read from the from the screen and Patient.MRN is set to that value.</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>SkipWrite</b> -- Give value of Yes so data is not written back to JSON (useful for excel RPA files)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.Create</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Patient.Create, @@Patient, @@Create</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>HyperspaceLookup</strong> <em>SkipWrite:No</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Patient Lookup in Hyperspace</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.HyperspaceLookup</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>HyperspaceCreate</strong> <em>SkipWrite:No</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Create a patient in Hyperspace</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.HyperspaceCreate</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>HyperdriveLookup</strong> <em>SkipWrite:No</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Patient Lookup in Hyperdrive</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.HyperdriveLookup</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>HyperdriveCreate</strong> <em>SkipWrite:No</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Create a patient in Hyperdrive</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.HyperdriveCreate </TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>GetCSN</strong> <em>SkipWrite:No</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Get the patient CSN</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>SkipWrite</b> -- Give value of Yes so data is not written back to JSON (useful for excel RPA files)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.GetCSN</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Patient.GetCSN, @@CSN</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>GetHAR</strong> <em>SkipWrite:No</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Get the patient HAR</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>SkipWrite</b> -- Give value of Yes so data is not written back to JSON (useful for excel RPA files)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">Patient.GetHAR</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@Patient.GetHAR, @@HAR</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+		</TABLE> 
+
+		<br><br><i>Generated by EggDoc on Wednesday, August 28, 2024 12:01 PM</i>
+	</BODY> 
+</HTML> 

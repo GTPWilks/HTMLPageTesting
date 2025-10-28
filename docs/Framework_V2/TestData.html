@@ -1,0 +1,676 @@
+<HTML> 
+	<HEAD> 
+		<TITLE> 
+			TestData Script Details 
+		</TITLE>
+		<LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> 
+	</HEAD> 
+	<BODY> 
+		<H1>TestData <font size=3> -- in suite <a href="index.html">Framework_V2</a></font></H1> 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------<br>	Script_Name: TestData<br>	Handler scripts for initializing, writing, generating or reading test data from source file<br><br>	See README for documetation and usage examples<br>	https://dev.azure.com/SureTest-Health/_git/SureWorks?path=/Framework_V2.suite/README.md&version=GBmain&_a=preview<br>-------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+
+
+<br>
+
+
+		<H3>Handlers in TestData script:</H3>
+		<TABLE BGCOLOR=#AADDFF BORDER="0" CELLSPACING="2" CELLPADDING="8" STYLE="width:100%;"> 
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>InitializeTestDataSources</strong> <em>ScriptID, PatientID</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Initialize Test Data Resource files.</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>ScriptID</b> -- ID of the script (ex: INT3052)<br><b>PatientID</b> -- If multi patient test this will be ID of patient json to initialize ex: patient1)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.InitializeTestDataSources "[ScriptID]", "[PatientID]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.InitializeTestDataSources, @@Data, @@TestData, @@Initialize, @@JSON</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ReadTestPatientData</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Read in patient test data</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.ReadTestPatientData</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.ReadTestPatientData, @@Data, @@TestData, @@PatientData, @@JSON, @@Patient, @@Read</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ReadTestPatientData_withScriptData</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Read in patient test data the new way where you have one patient block and one script block</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.ReadTestPatientData_withScriptData</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.ReadTestPatientData, @@Data, @@TestData, @@PatientData, @@JSON, @@Patient, @@Read</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>ReadTestPatientData_withoutScriptData</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Read in patient test data the old way where patient has multiple day blocks</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.ReadTestPatientData_withoutScriptData</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.ReadTestPatientData, @@Data, @@TestData, @@PatientData, @@JSON, @@Patient, @@Read</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>WriteTestPatientData</strong> <em>EndOfDay, EndOfScript, nextScriptID, UpdateScriptDay: "Yes",attachFile, UpdateTask :"Yes"</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Write in patient test data</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>EndOfDay</b> -- - True/False   If True then run Logic to update scriptDay<br><b>EndOfScript</b> -- - True/False   If True then run Logic to update completed<br><b>nextScriptID</b> -- - If value given will try and pass patiendata to json file for another script<br><b>UpdateScriptDay</b> -- - True/False   By default will update script day but if "No" will skip updating the day.  Needed for scirpt broken into parts for same day<br><b>attachFile</b> -- - True/False   Attach evidencelogs to task<br><b>UpdateTask</b> -- - True/False   By default will update script run task but if "No" will not. Used when task is just created only need to store the in progress task to json but no data to actually update in task</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.WriteTestPatientData "[EndOfDay]", "[EndOfScript]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.WriteTestPatientData, @@Data, @@TestData, @@PatientData, @@JSON, @@Patient, @@Write</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>WriteTestPatientData_withScriptData</strong> <em>EndOfDay, EndOfScript, nextScriptID, UpdateScriptDay: "Yes", attachFile, UpdateTask :"Yes"</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Write in patient test data the new way where you have one patient block and one script block</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>EndOfDay</b> -- - True/False   If True then run Logic to update scriptDay.  If need to skip multiple days can pass numeric value between 1 and 7 instead of true<br><b>EndOfScript</b> -- - True/False   If True then run Logic to update completed<br><b>nextScriptID</b> -- - If value given will try and pass patiendata to json file for another script<br><b>UpdateScriptDay</b> -- - True/False   By default will update script day but if "No" will skip updating the day.  Needed for scirpt broken into parts for same day<br><b>attachFile</b> -- - True/False   Attach evidencelogs to task<br><b>UpdateTask</b> -- - True/False   By default will update script run task but if "No" will not. Used when task is just created only need to store the in progress task to json but no data to actually update in task</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.WriteTestPatientData "[EndOfDay]", "[EndOfScript]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.WriteTestPatientData, @@Data, @@TestData, @@PatientData, @@JSON, @@Patient, @@Write</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>WriteTestPatientData_withoutScriptData</strong> <em>EndOfDay, EndOfScript</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Write in patient test data  the old way where patient has multiple day blocks</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>EndOfDay</b> -- - True/False   If True then run Logic to update scriptDay<br><b>EndOfScript</b> -- - True/False   If True then run Logic to update completed</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.WriteTestPatientData "[EndOfDay]", "[EndOfScript]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.WriteTestPatientData, @@Data, @@TestData, @@PatientData, @@JSON, @@Patient, @@Write</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>GenerateTestPatient</strong> <em>PatientType: "Adult", YearsOld, MonthsOld, GetRealName: "No", DaysOld, isFormal: universal FormalTesting, MainPatient: true, TestSpecificLastName</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Initializes the universal Patient object with random test data</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>PatientType</b> -- - indicates more specific age/gender characteristics for the test patient.  Adult is default if empty or not one of the following:<br><b>Senior,</b> -- SeniorMale, SeniorFemale, AdultMale, AdultFemale, Teen, TeenMale, TeenFemale, AdultMom, Mom, Mother, Child, ChildMale, ChildFemale<br><b>YearsOld</b> -- - Number of Years old the script asks the patient to be<br><b>MonthsOld</b> -- - Number of Months old the script asks the patient to be<br><b>GetRealName</b> -- - Will Use a random name from json file <br><b>DaysOld</b> -- Number of Days old the script asks the patient to be<br><b>MainPatient</b> -- If patient create is to be your main patient or seconday (such as target patient)<br><b>TestSpecificLastName</b> -- If test needs a specific last name used that is not the normal from the other client test.  Default is empty so only used if a value is provided</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.GenerateTestPatient "[PatientType]", [YearsOld], [MonthsOld], "[GetRealName]"	</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.GenerateTestPatient, @@Generate, @@Data, @@Patient, @@Create</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>MigratePatientData</strong> <em>AlternateScriptID</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Copy updated patient data from current script to day 1 of another script resource json file			</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>AlternateScriptID</b> -- Script Identifier that you want to copy to.  ex: INT3052</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.MigratePatientData "[AlternateScriptID]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.MigratePatientData, @@ResoureceFile, @@Migrate</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>SwitchPatient</strong> <em>patientID</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>For multi patient test, this will save previous patient data and swtich to new patient by moving correct universal values into place</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>patientID</b> -- Patient ID to swtich to (ex: Patient1)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.SwitchPatient "[patientID]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.switchPatient, @@MultiPatient</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>resetPatientData</strong> <em>numOfPatients</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Reset all patient data variables</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>numOfPatients</b> -- number of patients that were created and can be cleaned up (optional, only needed for multi patient test)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.resetPatientData numOfPatients</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.resetMultiPatientData, @@MultiPatient</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>reloadPatients</strong> <em>ScriptID, numOfPatients</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>In case of crash or other reason that universal have been cleared for multi patient test, this will reload that data</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>ScriptID</b> -- ID of script to identify proper resource file(s)<br><b>numOfPatients</b> -- number of patients that were created and can be cleaned up (optional, only needed for multi patient test)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.reloadPatients "ScriptID", numOfPatients</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.resetMultiPatientData, @@MultiPatient</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CreatePatientData</strong> <em>PatientType: "Adult", YearsOld, MonthsOld, GetRealName: "No", DaysOld, MainPatient: true</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Generate patient data such as DOB, SSN, FirstName as needed.  Does not write back to file.</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>PatientType</b> -- indicates more specific age/gender characteristics for the test patient.  Adult is default if empty<br><b>YearsOld</b> -- Number of Years old the script asks the patient to be<br><b>MonthsOld</b> -- Number of Months old the script asks the patient to be<br><b>GetRealName</b> -- Will Use a random name from json file <br><b>DaysOld</b> -- Number of Days old the script asks the patient to be<br><b>MainPatient</b> -- If patient create is to be your main patient or seconday (such as target patient)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.CreatePatientData "[PatientType]", [YearsOld], [MonthsOld], "[GetRealName]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.GeneratePatientData, @@Generate, @@Data, @@Patient, @@Create</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>generateRandomSSN</strong></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Generate random SSN that is not all 9's or all 0's</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.generateRandomSSN 	</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.generateRandomSSN, @@Generate, @@Data, @@SSN</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>generateRandomPhoneNumbers</strong> <em>areaCode</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Generate random home, mobile and work number <br>TestData.generateRandomPhoneNumbers 203</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>areaCode</b> -- 3 digit area code to be used for the random number	</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.generateRandomPhoneNumbers areaCode</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.generateRandomPhoneNumbers, @@Generate, @@Data, @@PhoneNumber</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>setPatientName</strong> <em>GetRealName: "No"</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Set a patient name.  Will be random 6 digits unless specfied to GetRealName is Yes</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>GetRealName</b> -- Will Use a random name from json file </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.setPatientName "[GetRealName]"</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.generateRandomSSN, @@Generate, @@Data, @@SSN</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>setDOBGender_FromPatientType</strong> <em>PatientType: "Adult", YearsOld, MonthsOld, DaysOld</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Generate patient DOB and Gender based on patient Type</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>PatientType</b> -- indicates more specific age/gender characteristics for the test patient.  Adult is default if empty<br><b>YearsOld</b> -- Number of Years old the script asks the patient to be<br><b>MonthsOld</b> -- Number of Months old the script asks the patient to be</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.setDOBGender_FromPatientType "[PatientType]", [YearsOld], [MonthsOld], [DaysOld]					 </TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.calculatePatientType, @@Generate, @@Data, @@Patient</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>SplitName</strong> <em>NameToSplit, SetPatientUniversal: True</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Given a Full name (lastname, firstname middlename/initial) will split name up into variables<br>Will create two new universal variables so user can do as they wish with them</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>NameToSplit</b> -- If not passed in will use universal patient.fullname<br><b>SetPatientUniversal</b> -- will set universal patient variables (default is true)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.SplitName NameToSplit</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.SplitName, @@SplitName</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>LogGeneratedPatient</strong> <em>MainPatient</em></TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Multiple scripts log out the generated test patient data.  Consolidating to a handler for easier maintenance when changes need made</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Params</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9"><b>MainPatient</b> -- If patient create is to be your main patient or seconday (such as target patient)</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.LogGeneratedPatient MainPatient</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.LogGeneratedPatient, @@LogGeneratedPatient</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+
+			<TR CELLPADDING="2"> 
+			<TD COLSPAN="10" >to <strong>CreateTask</strong> </TD>
+			</TR><TR> 
+			<TD>&nbsp;</TD><TD CLASS="sp" COLSPAN="10"> <br>Create or resume a task in Clickup Logic</TD> 
+			</TR> 
+
+
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Snippet</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">TestData.CreateTask</TD> 
+			</TR> 
+
+
+			<TR CELLPADDING="2"> 
+			<TD>&nbsp;</TD><TD valign="top"><i>Tag</i></TD>
+
+			<TD CLASS="sp" COLSPAN="9">@@TestData.CreateTask, @@CreateTask</TD> 
+			</TR> 
+
+			<TR CELLPADDING="0"> 
+			<TD COLSPAN="10" ><HR size = 1></TD>
+			</TR>
+ 
+		</TABLE> 
+
+		<br><br><i>Generated by EggDoc on Tuesday, October 28, 2025 03:51 PM</i>
+	</BODY> 
+</HTML> 
